@@ -327,15 +327,19 @@ ul {
   display: flex;
   padding-left: 0px;
 }
-.work-activity .work-iten + .work-iten {
+.work-activity .work-image + .work-image {
   margin-left: 30px;
 }
 .work-image {
   position: relative;
 }
 .work-text {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: absolute;
+
   top: 224px;
   right: 0;
   width: 100%;
@@ -345,19 +349,13 @@ ul {
 }
 
 .work-text p {
-  display: flex;
-  padding-top: 27px;
-  padding-left: 82px;
-  padding-bottom: 27px;
-  padding-right: 83px;
   margin-top: 0px;
   margin-bottom: 0px;
 
-  justify-content: center;
-  font-style: bold;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  font-weight: bold;
 }
 
 /* Секція:"Наша команда" */
@@ -413,7 +411,7 @@ ul {
   display: flex;
   padding-top: 0px;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 16px;
   justify-content: center;
 
   color: #757575;
@@ -423,7 +421,7 @@ ul {
 }
 .social-icons {
   display: inline-flex;
-  padding: 0px 32px 30px 32px;
+  padding-left: 0px;
 }
 .social-icons-iten:not(:last-child) {
   margin-right: 10px;
