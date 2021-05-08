@@ -392,6 +392,23 @@
                     <use href="./icons/sprite.svg#icon-button-close"></use>
                 </svg>
             </button>
+            <form class="contact-form" >
+                <h2 class="contact-form-title">Оставьте свои данные, мы вам перезвоним</h2>
+                
+                <label for="name" class="name-label">Имя</label>
+                <input type="text" name="user-name" id="name" class="contact-form-field" />
+                
+                <label for="phone" class="phone-label">Телефон</label>
+                <input type="tel" name="user-phone" id="phone" class="contact-form-field" />
+                
+                <label for="mail">Почта</label>
+                <input type="email" name="user-email" id="mail" class="contact-form-field" />
+        
+                <label for="comments">Комментарий</label>
+                <textarea name="user-message" id="comments" placeholder="Введите текст" class="contact-form-field contact-form-mesagge"></textarea>
+
+                <button type="submit" class="contact-form-button">Отправить</button>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>

@@ -911,3 +911,26 @@ ul {
   width: 18px;
   height: 18px;
 }
+
+.contact-form-button {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px 10px 56px;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+
+  color: #ffffff;
+  background-color: #2196f3;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  /* transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}
