@@ -392,23 +392,43 @@
                     <use href="./icons/sprite.svg#icon-button-close"></use>
                 </svg>
             </button>
-            <form class="contact-form" >
-                <h2 class="contact-form-title">Оставьте свои данные, мы вам перезвоним</h2>
-                
-                <label for="name" class="name-label">Имя</label>
-                <input type="text" name="user-name" id="name" class="contact-form-field" />
-                
-                <label for="phone" class="phone-label">Телефон</label>
-                <input type="tel" name="user-phone" id="phone" class="contact-form-field" />
-                
-                <label for="mail">Почта</label>
-                <input type="email" name="user-email" id="mail" class="contact-form-field" />
-        
-                <label for="comments">Комментарий</label>
-                <textarea name="user-message" id="comments" placeholder="Введите текст" class="contact-form-field contact-form-mesagge"></textarea>
-
-                <button type="submit" class="contact-form-button">Отправить</button>
+            <div class="modal-list">
+            <h2 class="contact-form-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <form class="contact-form" >    
+                <div class="contact-form-box">
+                    <label for="name" class="name-label text-label">Имя</label>                  
+                    <input type="text" name="user-name" id="name" placeholder=" " class="contact-form-field" />
+                    <samp>
+                        <svg class="contact-form-icon">
+                            <use href="./icons/sprite.svg#icon-person"></use>
+                        </svg>
+                    </samp>                     
+                </div>
+                <div class="contact-form-box">
+                    <label for="phone" class="phone-label text-label">Телефон</label>
+                    <input type="tel" name="user-phone" id="phone" placeholder=" " class="contact-form-field" />
+                    <samp>
+                        <svg class="contact-form-icon">
+                            <use href="./icons/sprite.svg#icon-phone"></use>
+                        </svg>
+                    </samp>                             
+                </div>
+                <div class="contact-form-box">
+                    <label for="mail" class="mail-label text-label">Почта</label>
+                    <input type="email" name="user-email" id="mail" placeholder=" " class="contact-form-field" />
+                    <samp>
+                       <svg class="contact-form-icon">
+                           <use href="./icons/sprite.svg#icon-email"></use>
+                       </svg>
+                   </samp>          
+                </div>
+                <div class="contact-form-box">
+                    <label for="comments" class="text-label">Комментарий</label>
+                    <textarea name="user-message" id="comments" placeholder="Введите текст" class="contact-form-mesagge"></textarea>
+                </div>      
             </form>
+            <button type="submit" class="contact-form-button">Отправить</button>
+            </div>
         </div>
     </div>
     <script src="./js/modal.js"></script>
