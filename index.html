@@ -396,38 +396,36 @@
             <h2 class="contact-form-title">Оставьте свои данные, мы вам перезвоним</h2>
             <form class="contact-form" >    
                 <div class="contact-form-box">
-                    <label for="name" class="name-label text-label">Имя</label>                  
-                    <input type="text" name="user-name" id="name" placeholder=" " class="contact-form-field" />
-                    <samp>
-                        <svg class="contact-form-icon">
-                            <use href="./icons/sprite.svg#icon-person"></use>
-                        </svg>
-                    </samp>                     
+                    <label for="name" class="contact-form-label">Имя</label>                  
+                    <input type="text" name="user-name" id="name" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" placeholder=" " class="contact-form-field contact-form-invalid" /> 
+                    <svg class="contact-form-icon">
+                        <use href="./icons/sprite.svg#icon-person"></use>
+                    </svg>
                 </div>
                 <div class="contact-form-box">
-                    <label for="phone" class="phone-label text-label">Телефон</label>
-                    <input type="tel" name="user-phone" id="phone" placeholder=" " class="contact-form-field" />
-                    <samp>
-                        <svg class="contact-form-icon">
-                            <use href="./icons/sprite.svg#icon-phone"></use>
-                        </svg>
-                    </samp>                             
+                    <label for="phone" class="contact-form-label">Телефон</label>
+                    <input type="tel" name="user-phone" id="phone" pattern="[0-9]{10}" placeholder=" " class="contact-form-field contact-form-invalid" />
+                    <svg class="contact-form-icon">
+                        <use href="./icons/sprite.svg#icon-phone"></use>
+                    </svg>                           
                 </div>
                 <div class="contact-form-box">
-                    <label for="mail" class="mail-label text-label">Почта</label>
+                    <label for="mail" class="contact-form-label">Почта</label>
                     <input type="email" name="user-email" id="mail" placeholder=" " class="contact-form-field" />
-                    <samp>
-                       <svg class="contact-form-icon">
-                           <use href="./icons/sprite.svg#icon-email"></use>
-                       </svg>
-                   </samp>          
+                    <svg class="contact-form-icon">
+                        <use href="./icons/sprite.svg#icon-email"></use>
+                    </svg>          
                 </div>
                 <div class="contact-form-box">
-                    <label for="comments" class="text-label">Комментарий</label>
+                    <label for="comments" class="contact-form-label">Комментарий</label>
                     <textarea name="user-message" id="comments" placeholder="Введите текст" class="contact-form-mesagge"></textarea>
-                </div>      
+                </div> 
+                <div class="contact-form-box1">
+                    <input type="checkbox" name="user-checkbox" id="checkbox" class="contact-form-checkbox">
+                    <label for="checkbox" class="checkbox-label">Соглашаюсь с рассылкой и принимаю <a href="" class="contact-form-link">Условия договора</a></label>
+                </div>
+                <button type="submit" class="contact-form-button">Отправить</button>
             </form>
-            <button type="submit" class="contact-form-button">Отправить</button>
             </div>
         </div>
     </div>
