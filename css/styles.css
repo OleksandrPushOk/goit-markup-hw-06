@@ -659,6 +659,64 @@ ul {
   fill: #ffffff;
 }
 
+/* Форма */
+.box3 {
+  display: flex;
+}
+.form-footer {
+  width: 580px;
+  height: 86px;
+  margin-left: 93px;
+}
+.form-footer-title {
+  display: inline-flex;
+  margin-top: 0px;
+  margin-bottom: 20px;
+
+  font-style: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 1);
+}
+.form-footer-input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+  outline: none;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+.form-footer-button {
+  display: inline-flex;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #2196f3;
+  margin-left: 12px;
+  padding: 10px 28px 10px 29px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  color: #ffffff;
+  background-color: #2196f3;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+.form-footer-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: rgba(255, 255, 255, 1);
+}
 /* Сторінка:"Портфоліо"*/
 .close-title {
   display: none;
@@ -966,10 +1024,12 @@ ul {
 }
 .contact-form-field {
   padding-left: 42px;
+  margin-top: 4px;
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   outline: none;
+  color: rgba(117, 117, 117, 1);
 
   transition-property: border;
   transition-duration: 250ms;
@@ -984,8 +1044,10 @@ ul {
 .contact-form-mesagge {
   width: 100%;
   height: 120px;
+  margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   outline: none;
+  color: rgba(117, 117, 117, 1);
 
   transition-property: border;
   transition-duration: 250ms;
@@ -998,14 +1060,16 @@ ul {
   opacity: 0;
 }
 .checkbox-label {
-  display: inline-block;
+  display: inline-flex;
   align-items: center;
   margin-top: 20px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  text-align: justify;
 }
 .checkbox-label .contact-form-link {
+  margin-left: 7px;
   color: #2196f3;
 }
 .checkbox-label::before {
