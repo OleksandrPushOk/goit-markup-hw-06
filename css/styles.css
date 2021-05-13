@@ -525,6 +525,7 @@ ul {
 .box {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 .box1 {
   flex-direction: column;
@@ -661,14 +662,18 @@ ul {
 
 /* Форма */
 .box3 {
-  display: flex;
+  display: inline-block;
+  margin-left: 93px;
+  width: 570px;
 }
 .form-footer {
-  width: 580px;
-  height: 86px;
-  margin-left: 93px;
+  display: flex;
+  justify-content: space-between;
+  width: 570px;
+  height: 50px;
+  margin: 0px;
 }
-.form-footer-title {
+.form-footer-paragraph {
   display: inline-flex;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -683,6 +688,9 @@ ul {
 .form-footer-input {
   width: 358px;
   height: 50px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -690,6 +698,14 @@ ul {
   outline: none;
 
   color: rgba(255, 255, 255, 0.3);
+
+  transition-property: border, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-footer-input:focus {
+  border: 1px solid var(--hover-focus-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .form-footer-button {
   display: inline-flex;
@@ -769,9 +785,6 @@ ul {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
 }
-/* .all-buttons.one:visited {
-  color: var(--hover-focus-color);
-} */
 .all-buttons.two {
   min-width: 128px;
   height: 38px;
@@ -806,8 +819,6 @@ ul {
 }
 .photo-order {
   display: block;
-  /* max-width: 100%;
-  height: auto; */
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
@@ -836,22 +847,6 @@ ul {
   overflow: hidden;
   position: relative;
 }
-/* .photo-pile::before {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-
-  transform: translateY(100%);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.photo-pile:hover::before {
-  transform: translateY(0);
-} */
 .photo-text {
   display: inline-block;
   position: absolute;
@@ -944,6 +939,8 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
+  right: auto;
+  bottom: auto;
   transform: translate(-50%, -50%);
 
   display: flex;
@@ -983,13 +980,14 @@ ul {
 }
 .contact-form {
   width: 448px;
-  height: 342px;
+  min-height: 342px;
 }
-.contact-form-title {
+.contact-form-paragraph {
   display: inline-flex;
   width: 448px;
-  margin: 40px 0px 12px 0px;
-  font-style: bold;
+  padding: 40px 0px 12px 0px;
+  margin: 0px;
+  font-weight: bold;
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 0.03em;
@@ -1028,6 +1026,7 @@ ul {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
   outline: none;
   color: rgba(117, 117, 117, 1);
 
@@ -1045,7 +1044,9 @@ ul {
   width: 100%;
   height: 120px;
   margin-top: 4px;
+  padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
   outline: none;
   color: rgba(117, 117, 117, 1);
 
@@ -1055,6 +1056,9 @@ ul {
 }
 .contact-form-mesagge:focus {
   border: 1px solid var(--hover-focus-color);
+}
+.contact-form-mesagge::placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 .contact-form-checkbox {
   opacity: 0;
@@ -1067,6 +1071,7 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-align: justify;
+  cursor: pointer;
 }
 .checkbox-label .contact-form-link {
   margin-left: 7px;
@@ -1091,14 +1096,27 @@ ul {
   border-color: var(--hover-focus-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.contact-form-checkbox:focus + .checkbox-label::before {
+  background-image: url(../icons/vector.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: var(--hover-focus-color);
+  border-color: var(--hover-focus-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.contact-form-box2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
 .contact-form-button {
   display: inline-block;
   width: 200px;
   height: 50px;
-  margin-top: 30px;
-  margin-left: 124px;
   padding: 10px 55px 10px 56px;
-  border: 1px solid #2196f3;
+  border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
